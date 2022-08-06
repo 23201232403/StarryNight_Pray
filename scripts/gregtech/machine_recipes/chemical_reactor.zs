@@ -9,7 +9,7 @@ import mods.gregtech.recipe.RecipeMap;
 //基岩精华
 chemical_reactor.recipeBuilder()
     .inputs([<ore:compressed1xDustBedrock>*8])
-    .outputs(<gregtech:meta_dust:32043>)
+    .outputs(<metaitem:dustBedrockEssence>)
     .fluidInputs([<liquid:nitric_acid>*2000])
     .fluidOutputs([<liquid:sulfuric_nickel_solution>*2000])
     .EUt(30720)
@@ -26,7 +26,6 @@ chemical_reactor.recipeBuilder()
 
 //浓缩肼
 chemical_reactor.recipeBuilder()
-    .inputs(<ore:dustElectrumFlux>)
     .fluidInputs(<liquid:hydrazine>*4000,<liquid:methanol>*6000)
     .fluidOutputs(<liquid:dense_hydrazine_hybrid_rocket_fuel>*10000)
     .circuit(2)
@@ -52,8 +51,7 @@ large_chemical_reactor.recipeBuilder()
     .buildAndRegister();
 
 //紫色燃料
-large_chemical_reactor.recipeBuilder()
-    .inputs(<ore:dustTinySignalum>)
+chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:monomethylhydrazine>*6000,<liquid:nitric_acid>*3000)
     .fluidOutputs(<liquid:purple_rocket_fuel>*9000)
     .circuit(3)
@@ -87,8 +85,7 @@ large_chemical_reactor.recipeBuilder()
     .buildAndRegister();
 
 //绿色燃料
-large_chemical_reactor.recipeBuilder()
-    .inputs(<ore:dustTinyMelodicAlloy>)
+chemical_reactor.recipeBuilder()
     .fluidInputs(<liquid:unsymmetrical_dimethylhydrazine>*8000,<liquid:dinitrogen_tetroxide>*8000)
     .fluidOutputs(<liquid:green_rocket_fuel>*20000)
     .duration(1200)
@@ -106,12 +103,21 @@ chemical_reactor.recipeBuilder()
 
 //助燃剂
 large_chemical_reactor.recipeBuilder()
-    .inputs(<ore:dustSaltpeter>*2,<ore:elvenPixieDust>)
-    .fluidInputs(<liquid:hydrogen_peroxide>*2000,<liquid:nitrogen_dioxide>*2000,<liquid:celestial_energy>*100)
-    .fluidOutputs(<liquid:combustion_promotor>*4000)
+    .inputs(<ore:dustSaltpeter>*2)
+    .fluidInputs(<liquid:hydrogen_peroxide>*2000,<liquid:nitrogen_dioxide>*2000)
+    .fluidOutputs(<liquid:combustion_promotor>*3000)
     .circuit(16)
     .duration(200)
     .EUt(120)
+    .buildAndRegister();
+
+large_chemical_reactor.recipeBuilder()
+    .inputs(<ore:dustSaltpeter>*2,<ore:elvenPixieDust>)
+    .fluidInputs(<liquid:hydrogen_peroxide>*2000,<liquid:nitrogen_dioxide>*4000,<liquid:celestial_energy>*100)
+    .fluidOutputs(<liquid:combustion_promotor>*9000)
+    .circuit(16)
+    .duration(200)
+    .EUt(480)
     .buildAndRegister();
 
 //氯化亚铁
@@ -165,4 +171,27 @@ chemical_reactor.recipeBuilder()
     .circuit(2)
     .EUt(120)
     .duration(510)
+    .buildAndRegister();
+
+//聚乙烯 聚氯乙烯 聚四氟乙烯增产
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs([<liquid:oxygen>*7500,<liquid:ethylene>*2160])
+    .fluidOutputs(<liquid:plastic>*4320)
+    .circuit(4)
+    .EUt(30)
+    .duration(800)
+    .buildAndRegister();
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs([<liquid:oxygen>*7500,<liquid:vinyl_chloride>*2160])
+    .fluidOutputs(<liquid:polyvinyl_chloride>*4320)
+    .circuit(4)
+    .EUt(30)
+    .duration(800)
+    .buildAndRegister();
+large_chemical_reactor.recipeBuilder()
+    .fluidInputs([<liquid:oxygen>*7500,<liquid:tetrafluoroethylene>*2160])
+    .fluidOutputs(<liquid:polytetrafluoroethylene>*4320)
+    .circuit(4)
+    .EUt(30)
+    .duration(800)
     .buildAndRegister();

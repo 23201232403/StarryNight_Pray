@@ -20,7 +20,7 @@ alloy_smelter.recipeBuilder()
 //硼铁合金
 alloy_smelter.recipeBuilder()
     .inputs([<ore:dustBoron>,<ore:dustIron>|<ore:ingotIron>])
-    .outputs(<gregtech:meta_ingot:32028>)
+    .outputs(<metaitem:dustFerroboron>)
     .duration(200)
     .EUt(120)
     .buildAndRegister();

@@ -25,9 +25,9 @@ var promotors as int[] = [
 
 //定义燃值
 var values as int[] = [
-    1536000,
-    3072000,
-    6144000,
+    2048000,
+    4096000,
+    7168000,
     12288000
 ];
 
@@ -49,7 +49,7 @@ for i in 0 .. 4 {
         ecengine.recipeBuilder()
             .notConsumable(piston*16)
             .circuit(1)
-            .fluidInputs([fuel*6000,<liquid:combustion_promotor>*(promotor*6)])
+            .fluidInputs([fuel*5000,<liquid:combustion_promotor>*(promotor*5)])
             .EUt(EUt*-4)
             .duration(value/EUt)
             .buildAndRegister();

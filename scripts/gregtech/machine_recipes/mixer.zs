@@ -45,7 +45,7 @@ mixer.recipeBuilder()
         <ore:dustTitanium> * 1,
         <ore:dustAluminium> * 1
     ])
-    .outputs(<gregtech:meta_dust:32020> * 2)
+    .outputs(<metaitem:dustTitaniumAluminide> * 2)
     .EUt(128)
     .duration(80)
     .buildAndRegister();
@@ -56,7 +56,7 @@ mixer.recipeBuilder()
         <ore:dustTitanium> * 1,
         <ore:dustIridium> * 1
     ])
-    .outputs(<gregtech:meta_dust:32021> * 2)
+    .outputs(<metaitem:dustTitaniumIridium> * 2)
     .EUt(384)
     .duration(100)
     .buildAndRegister();
@@ -96,7 +96,7 @@ mixer.recipeBuilder()
 //硼铁合金
 mixer.recipeBuilder()
     .inputs([<ore:dustBoron>,<ore:dustIron>])
-    .outputs(<gregtech:meta_dust:32028>)
+    .outputs(<metaitem:dustFerroboron>)
     .duration(40)
     .EUt(120)
     .buildAndRegister();
@@ -104,7 +104,7 @@ mixer.recipeBuilder()
 //高强合金
 mixer.recipeBuilder()
     .inputs([<ore:dustFerroboron>*2,<ore:dustSilicon>,<ore:dustChrome>,<ore:dustCarbon>,<ore:dustLithium>*4])
-    .outputs([<gregtech:meta_dust:32029>*2])
+    .outputs([<metaitem:dustToughAlloy>*2])
     .duration(30)
     .EUt(1920)
     .buildAndRegister();
@@ -112,7 +112,7 @@ mixer.recipeBuilder()
 //热引合金
 mixer.recipeBuilder()
     .inputs([<ore:dustToughAlloy>*6,<ore:dustTantalumCarbide>*4,<ore:dustMolybdenumDisilicide>*9,<ore:dustCaesium>*9])
-    .outputs([<gregtech:meta_dust:32041>*6])
+    .outputs([<metaitem:dustThermoconductingAlloy>*6])
     .duration(200)
     .EUt(7680)
     .buildAndRegister();
@@ -120,7 +120,7 @@ mixer.recipeBuilder()
 //基岩合金
 mixer.recipeBuilder()
     .inputs([<ore:dustExtremeAlloy>*7,<ore:dustOrichalcum>*3,<ore:dustBedrockEssence>*1,<ore:dustTrinium>*2,<ore:dustEuropium>*1])
-    .outputs([<gregtech:meta_dust:32042>*10])
+    .outputs([<metaitem:dustBedrockAlloy>*10])
     .duration(450)
     .EUt(30720)
     .buildAndRegister();
@@ -128,8 +128,11 @@ mixer.recipeBuilder()
 //高能合金
 mixer.recipeBuilder()
     .inputs([<ore:dustEnderiumCryotheum>,<ore:dustSignalumFluorescent>,<ore:dustLumiumPyrotheum>,<ore:dustElectrumFlux>])
-    .fluidInputs([<liquid:astralsorcery.liquidstarlight>*16000])
-    .outputs(<gregtech:meta_dust:32107>*2)
+    .fluidInputs([<liquid:uranium>*1152])
+    .outputs(<metaitem:dustHighEnergyAlloy>*2)
     .duration(1000)
     .EUt(30720)
     .buildAndRegister();
+
+
+<recipemap:mixer>.findRecipe(16, null, [<liquid:oxygen> * 1000, <liquid:dimethylhydrazine> * 1000]).remove();

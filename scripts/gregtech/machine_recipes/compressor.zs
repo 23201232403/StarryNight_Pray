@@ -9,7 +9,7 @@ import mods.gregtech.recipe.RecipeMap;
 //压缩石头粉
 compressor.recipeBuilder()
     .inputs([<ore:dustStone>*32])
-    .outputs(<gregtech:meta_dust:32036>)
+    .outputs(<metaitem:dustCompactStone>)
     .EUt(120)
     .duration(900)
     .buildAndRegister();

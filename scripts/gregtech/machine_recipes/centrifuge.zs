@@ -29,9 +29,70 @@ centrifuge.recipeBuilder()
 //未知金属残渣粉
 centrifuge.recipeBuilder()
     .inputs([<ore:dustCompactStone>*2])
-    .outputs([<gregtech:meta_dust:417>*32,<gregtech:meta_dust:304>*14,<gregtech:meta_dust:376>*14,<gregtech:meta_dust:316>*8,<gregtech:meta_dust:2022>*4,<gregtech:meta_dust:32037>*1])
+    .outputs([<gregtech:meta_dust:417>*32,<gregtech:meta_dust:304>*14,<gregtech:meta_dust:376>*14,<gregtech:meta_dust:316>*8,<gregtech:meta_dust:2022>*4,<metaitem:dustUnknownResidue>*1])
     .fluidInputs([<liquid:hydrofluoric_acid>*19200])
     .fluidOutputs([<liquid:depleted_uranium_hexafluoride>*3200])
     .EUt(1920)
     .duration(200)
+    .buildAndRegister();
+
+//AR水晶方块离心
+centrifuge.recipeBuilder()
+    .inputs(<advancedrocketry:crystal>*64)
+    .fluidInputs(<liquid:aqua_regia>*15000)
+    .fluidOutputs([<liquid:nitric_acid>*5000,<liquid:hydrochloric_acid>*10000])
+    .outputs([<metaitem:dustLead>*38,<metaitem:dustTitanium>*7,<metaitem:dustNiobium>*7,
+    <metaitem:dustTantalum>*5,<metaitem:dustMolybdenum>*5,<metaitem:dustIndium>])
+    .EUt(480)
+    .duration(500)
+    .buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .inputs(<advancedrocketry:crystal:1>*64)
+    .fluidInputs(<liquid:aqua_regia>*15000)
+    .fluidOutputs([<liquid:nitric_acid>*5000,<liquid:hydrochloric_acid>*10000])
+    .outputs([<metaitem:dustAluminium>*34,<metaitem:dustCobalt>*10,<metaitem:dustBismuth>*7,
+    <metaitem:dustLanthanum>*7,<metaitem:dustRuthenium>*4,<metaitem:dustOsmium>*2])
+    .EUt(480)
+    .duration(500)
+    .buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .inputs(<advancedrocketry:crystal:2>*64)
+    .fluidInputs(<liquid:aqua_regia>*15000)
+    .fluidOutputs([<liquid:nitric_acid>*5000,<liquid:hydrochloric_acid>*10000])
+    .outputs([<metaitem:dustEmerald>*30,<metaitem:dustBeryllium>*10,<metaitem:dustManganese>*7,
+    <metaitem:dustBoron>*7,<metaitem:dustCerium>*6,<metaitem:dustIridium>*4])
+    .EUt(480)
+    .duration(500)
+    .buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .inputs(<advancedrocketry:crystal:3>*64)
+    .fluidInputs(<liquid:aqua_regia>*15000)
+    .fluidOutputs([<liquid:nitric_acid>*5000,<liquid:hydrochloric_acid>*10000])
+    .outputs([<metaitem:dustCinnabar>*39,<metaitem:dustMagnesium>*6,<metaitem:dustChrome>*6,
+    <metaitem:dustYttrium>*5,<metaitem:dustCaesium>*4,<metaitem:dustRhodium>*4])
+    .EUt(480)
+    .duration(500)
+    .buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .inputs(<advancedrocketry:crystal:4>*64)
+    .fluidInputs(<liquid:aqua_regia>*15000)
+    .fluidOutputs([<liquid:nitric_acid>*5000,<liquid:hydrochloric_acid>*10000])
+    .outputs([<metaitem:dustPlatinum>*24,<metaitem:dustPhosphorus>*14,<metaitem:dustArsenic>*10,<metaitem:dustGold>*7,
+    <metaitem:dustBarium>*6,<metaitem:dustSamarium>*3])
+    .EUt(480)
+    .duration(500)
+    .buildAndRegister();
+
+centrifuge.recipeBuilder()
+    .inputs(<advancedrocketry:crystal:5>*64)
+    .fluidInputs(<liquid:aqua_regia>*15000)
+    .fluidOutputs([<liquid:nitric_acid>*5000,<liquid:hydrochloric_acid>*10000])
+    .outputs([<metaitem:dustPalladium>*25,<metaitem:dustAntimony>*14,<metaitem:dustGallium>*7,
+    <metaitem:dustNeodymium>*5,<metaitem:dustVanadium>*5,<metaitem:dustNaquadah>*8])
+    .EUt(480)
+    .duration(500)
     .buildAndRegister();

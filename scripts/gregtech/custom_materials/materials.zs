@@ -177,37 +177,12 @@ MaterialBuilder(32025, "crystaltine")
     .blastTemp(5000,"HIGH",480,2200)
     .build();
 
-//龙素处理
-MaterialBuilder(32026,"dragon_essence")
-    .dust(2)
-    .color(0xF5C0F7)
-    .ore(1, 1, true)
-    .build();
-
-MaterialBuilder(32027,"crude_draconium_residue")
-    .dust()
-    .color(0x664773)
-    .build();
-
-MaterialBuilder(32030,"empowered_draconium")
-    .dust()
-    .color(0x9C5871)
-    .build();
-
-MaterialBuilder(32032,"naquadria_hydroxide")
-    .dust()
-    .components([<material:hydrogen>*3,<material:naquadria>*1,<material:oxygen>*3])
-    .color(0x15388E)
-    .build();
-
-MaterialBuilder(32033,"ethylanthraquinone")
-    .dust()
-    .color(0xC6B96A)
-    .build();
-
-MaterialBuilder(32034,"phthalic_anhydride")
-    .dust()
-    .color(0xC18AC1)
+//山铜
+MaterialBuilder(32026,"orichalcum")
+    .ingot().fluid()
+    .color(0xD135DA).iconSet("shiny")
+    .flags(["generate_plate","generate_rod","generate_frame"])
+    .blastTemp(4000,"MID",480,800)
     .build();
 
 //精金
@@ -216,29 +191,6 @@ MaterialBuilder(32035,"adamantine")
     .color(0xB03247).iconSet("shiny")
     .flags(["generate_plate","generate_rod","generate_frame"])
     .blastTemp(6100,"HIGH",7680,600)
-    .build();
-
-//山铜处理
-MaterialBuilder(32036,"compact_stone")
-    .dust()
-    .color(0x444444)
-    .build();
-
-MaterialBuilder(32037,"unknown_residue")
-    .dust()
-    .color(0x1E6418)
-    .build();
-
-MaterialBuilder(32038,"mana_infused_residue")
-    .dust()
-    .color(0x202E54)
-    .build();
-
-MaterialBuilder(32039,"orichalcum")
-    .ingot().fluid()
-    .color(0xD135DA).iconSet("shiny")
-    .flags(["generate_plate","generate_rod","generate_frame"])
-    .blastTemp(4000,"MID",480,800)
     .build();
 
 //硼铁合金
@@ -443,15 +395,64 @@ MaterialBuilder(32163, "mythicalsteel")
     ])
     .build();
 
+//龙素处理
+MaterialBuilder(32200,"dragon_essence")
+    .dust(2)
+    .color(0xF5C0F7)
+    .ore(1, 1, true)
+    .build();
+
+MaterialBuilder(32201,"crude_draconium_residue")
+    .dust()
+    .color(0x664773)
+    .build();
+
+MaterialBuilder(32202,"empowered_draconium")
+    .dust()
+    .color(0x9C5871)
+    .build();
+
+MaterialBuilder(32203,"naquadria_hydroxide")
+    .dust()
+    .components([<material:hydrogen>*3,<material:naquadria>*1,<material:oxygen>*3])
+    .color(0x15388E)
+    .build();
+
+MaterialBuilder(32204,"ethylanthraquinone")
+    .dust()
+    .color(0xC6B96A)
+    .build();
+
+MaterialBuilder(32205,"phthalic_anhydride")
+    .dust()
+    .color(0xC18AC1)
+    .build();
+
+//山铜处理
+MaterialBuilder(32220,"compact_stone")
+    .dust()
+    .color(0x444444)
+    .build();
+
+MaterialBuilder(32221,"unknown_residue")
+    .dust()
+    .color(0x1E6418)
+    .build();
+
+MaterialBuilder(32222,"mana_infused_residue")
+    .dust()
+    .color(0x202E54)
+    .build();
+
 //Novanium
-MaterialBuilder(32699, "novanium")
+MaterialBuilder(32400, "novanium")
     .ingot().fluid()
     .color(0xc0dee8).iconSet("shiny")
     .blastTemp(10800,"HIGHEST",1966080,1000)
     .build();
 
 //Rick Astlium
-MaterialBuilder(32700, "rick_astlium")
+MaterialBuilder(32401, "rick_astlium")
     .ingot().fluid()
     .color(0xAF866A)
     .components([
